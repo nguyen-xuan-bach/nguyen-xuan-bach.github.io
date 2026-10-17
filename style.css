@@ -1,0 +1,172 @@
+/* ==========================================================================
+   Academic Minimalist Stylesheet
+   Modeled after classic French & international mathematics homepages
+   (Vincent Pilloni, Peter Scholze, Terence Tao, etc.)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Latin+Modern+Roman:ital,wght@0,400;0,700;1,400&family=Source+Code+Pro&display=swap');
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #111111;
+  --link-color: #0645ad;
+  --link-visited: #0b0080;
+  --link-hover: #d33682;
+  --hr-color: #cccccc;
+  --subtext-color: #555555;
+  --max-width: 780px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #18191a;
+    --text-color: #e4e6eb;
+    --link-color: #58a6ff;
+    --link-visited: #bc8cff;
+    --link-hover: #ff7b72;
+    --hr-color: #383b40;
+    --subtext-color: #9aa0a6;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Latin Modern Roman", "Computer Modern", Georgia, "Times New Roman", Times, serif;
+  font-size: 17px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* Headings */
+h1 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 0.1rem;
+  letter-spacing: -0.02em;
+}
+
+.vietnamese-name {
+  font-style: italic;
+  color: var(--subtext-color);
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  font-size: 1.1rem;
+}
+
+h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-top: 1.6rem;
+  margin-bottom: 0.8rem;
+  color: var(--text-color);
+}
+
+h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+}
+
+/* Bio & Address */
+.bio-card address {
+  font-style: normal;
+  line-height: 1.7;
+}
+
+.bio-card address a {
+  text-decoration: underline;
+}
+
+/* Links */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--link-visited);
+}
+
+a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+/* Horizontal Rule */
+hr {
+  border: 0;
+  border-top: 1px solid var(--hr-color);
+  margin: 1.8rem 0;
+}
+
+/* Lists */
+ul {
+  padding-left: 25px;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.65rem;
+}
+
+.pub-list li, .notes-list li {
+  margin-bottom: 0.85rem;
+  line-height: 1.55;
+}
+
+.pub-title {
+  font-weight: 600;
+}
+
+.coauthors {
+  font-style: italic;
+}
+
+.pub-status {
+  font-variant: small-caps;
+  color: var(--subtext-color);
+}
+
+.empty-hint {
+  font-size: 0.9rem;
+  color: var(--subtext-color);
+}
+
+/* Code & Formulas */
+code, pre {
+  font-family: "Source Code Pro", Menlo, Monaco, Consolas, monospace;
+  font-size: 0.9em;
+}
+
+/* Footer */
+footer {
+  margin-top: 2.5rem;
+  font-size: 0.88rem;
+  color: var(--subtext-color);
+}
+
+/* Print Friendly */
+@media print {
+  body {
+    background: #fff;
+    color: #000;
+    padding: 0;
+  }
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+}
